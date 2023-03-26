@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+.wrapper{
+    padding-top: 20vh;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(45deg,rgb(32, 2, 72), rgb(75, 0, 0));
+}
+#pass{
+    background-color: transparent;
+    border: 0;
+}
+.output-div{
+    background-color:rgba(0, 0, 33, 0.53);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    width:25%;
+    padding: 0 2rem;
+    box-shadow:0px 5px 0px yellow;
+    height: 3rem;
+    margin: 2rem auto;
+}
+.output-div button{
+    border: none;
+    background-color: transparent;
+}
+.pass_length{
+    display: flex;
+    justify-content: space-between;
+}
+.main_container{
+    background-color:rgba(0, 0, 33, 0.53);
+    border-radius: 15px;
+    display: flex;
+    margin: auto;
+    padding-left:0;
+    flex-direction: column;
+    text-align: left;
+    line-height: 2rem;
+    padding: 2rem;
+    width: 25%;
+    height: fit-content;
+}
+.checkbox{
+    border: 1px solid rgb(0, 123, 255);
+}
+.main_container button{
+    background-color: rgb(255, 0, 195);
+    padding: 0.5rem;
+    border-radius: 10px;
+    border:0px;
+    box-shadow:0px 5px 0px yellow;
+}
+.strength{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.copy_btn{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    right:1rem;
+}
+#coppied{
+    position: relative;
+    z-index: 100;
+    height: 0;
+    top:-1rem;
+}
+
+#indicator{
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    margin-right:4% ;
+}

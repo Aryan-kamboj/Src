@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="main_card">
+            <img src="image.jpg" alt="">
+            <h1>
+                Aryan Kamboj
+            </h1>
+            <p>
+                Student
+            </p>
+            <div class="btns">
+                <button onclick="overlay_active()">
+                    <i class="fa-solid fa-share"></i>
+                    Share my profile
+                </button>
+                <button>
+                    Follow me
+                </button>
+            </div>
+        </div>
+        <div id="overlay" class="overlay_inactive">
+            <div class="share_profile share_hidden">
+                    <div class="share_my ">
+                        <h1>Share My Profile</h1>
+                        <button id="close" onclick="overlay_inactive()" style="border:none;background: none;"><i class="fa fa-times" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <hr>
+                    <h3>Share this via</h3>
+                    <div class="socials">
+                        <a class="social_btn" id="fb">
+                            <i class="fa-brands fa-facebook-f"></i>                    
+                        </a>
+                        <a class="social_btn" id="twitter">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a class="social_btn" id="insta">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a class="social_btn" id="w_app">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a class="social_btn" id="tele">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="text-cyan-400">
+    </div>
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    <!-- <script src="index.js"></script> -->
+</body>
+</html>
