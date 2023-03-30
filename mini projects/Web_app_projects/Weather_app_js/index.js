@@ -12,18 +12,19 @@ function activate_search(){
 
 async function cords(){
         navigator.geolocation.getCurrentPosition(showPosition);
+        console.log("flag");
         async function showPosition(position){
         coordinates=position;
-        // console.log("location returned");
-        // console.log(coordinates);
+        console.log("location returned");
+        console.log(coordinates);
         weather_data = await weather_api_call_coordinates(coordinates.coords.longitude , coordinates.coords.latitude);
     }
 }
 async function weather_api_call_coordinates(long,lat){
-    // console.log("weather api called");
-    const weather_data = await fetch("http://api.weatherapi.com/v1/current.json?key=<API KEY>&q="+lat+","+long);
+    console.log("weather api called");
+    const weather_data = await fetch("http://api.weatherapi.com/v1/current.json?key=88f309794445401798361759232803&q="+lat+","+long);
     const weather_data_json = await weather_data.json();
-    // console.log(weather_data_json);
+    console.log(weather_data_json);
     return weather_data_json;
     } 
 
@@ -62,19 +63,32 @@ get_weather_data_coordinates();
 
 async function get_weather_data_location(){
     var search_bar = document.getElementById("search_bar");
-    var weather_data = await fetch("http://api.weatherapi.com/v1/current.json?key=<API KEY>&q="+search_bar.value);
-    weather_data=await weather_data.json();
+        var weather_data = await fetch("http://api.weatherapi.com/v1/current.json?key=88f309794445401798361759232803&q="+search_bar.value);
+        weather_data=await weather_data.json();
+    if(weather_data.error)
+    {
+        current_location.innerHTML = weather_data.error.message;
+        skies_text.innerHTML ="";
+        skies_icon.src = "";
+        temp.innerHTML = "&#176;C";
+        speed.innerHTML = " KpH"
+        humid.innerHTML = " %"
+        clouds.innerHTML = " %"
+    }
     // console.log(weather_data);
-    current_location.innerHTML = weather_data.location.name;
-    skies_text.innerHTML = weather_data.current.condition.text;
-    skies_icon.src = "https:"+weather_data.current.condition.icon;
-    temp.innerHTML = weather_data.current.temp_c+ "&#176;C";
-    speed.innerHTML = weather_data.current.wind_kph+" KpH"
-    humid.innerHTML = weather_data.current.humidity+" %"
-    clouds.innerHTML = weather_data.current.cloud+" %"
+    else{
+        current_location.innerHTML = weather_data.location.name;
+        skies_text.innerHTML = weather_data.current.condition.text;
+        skies_icon.src = "https:"+weather_data.current.condition.icon;
+        temp.innerHTML = weather_data.current.temp_c+ "&#176;C";
+        speed.innerHTML = weather_data.current.wind_kph+" KpH"
+        humid.innerHTML = weather_data.current.humidity+" %"
+        clouds.innerHTML = weather_data.current.cloud+" %"
+    }
 }
 
-//sample api response json
+//await keyword takes a function that returns a promise 
+
 // {
 //     "location": {
 //         "name": "Bagru",
