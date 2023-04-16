@@ -3,8 +3,8 @@
     padding: 0;
 }
 .wrapper{
-    /* background-image: radial-gradient(red, green, yellow, rgb(54, 0, 163)); */
-    /* background: #000; */
+    background-image: url(./gradient-bg.jpg);
+    background-size: cover;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -15,13 +15,19 @@
 .player{
     padding: 0.5rem 1rem;
     border-radius:15px ;
-    background-color: rgba(140, 140, 140, 0.588);
+    backdrop-filter: blur(10px);
+    background-color: rgba(218, 218, 218, 0.385);
     position: absolute;
     top:20vh;
 }
+.win{
+    background-color: rgba(1, 199, 1, 0.725);
+}
 .game{
+    padding: 2.5rem;
     border-radius: 10px;
-    background-color: rgba(140, 140, 140, 0.588);
+    backdrop-filter: blur(10px);
+    background-color: rgba(218, 218, 218, 0.322);
     width: 13rem;
     height: 13rem;
     display: flex;
@@ -38,8 +44,8 @@
     justify-content: center;
     align-items: center;
     color: white;
-    height: 4rem;
-    width: 4rem;
+    height: 5rem;
+    width: 5rem;
     cursor: pointer;
 }
 .rb{
@@ -55,4 +61,9 @@
 #reset{
     position: relative;
     top:10vh;
+    backdrop-filter: blur(10px);
+    background-color: rgba(218, 218, 218, 0.322);
+    border: none;
+    padding:1rem;
+    border-radius: 15px;
 }

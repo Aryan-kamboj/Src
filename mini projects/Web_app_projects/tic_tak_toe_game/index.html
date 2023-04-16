@@ -4,29 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div div class="wrapper">
         <div class="player">
-            Current player - X
+            <p id="current_player">Current player - X</p>
         </div>
         <div class="game">
             <div class="elements">
-                <div id="1" onclick="clicked(1)" class="cell rb">1</div>
-                <div id="2" onclick="clicked(2)" class="cell rb">2</div>
-                <div id="3" onclick="clicked(3)" class="cell b">3</div>
-                <div id="4" onclick="clicked(4)" class="cell rb">4</div>
-                <div id="5" onclick="clicked(5)" class="cell rb">5</div>
-                <div id="6" onclick="clicked(6)" class="cell b">6</div>
-                <div id="7" onclick="clicked(7)" class="cell r">7</div>
-                <div id="8" onclick="clicked(8)" class="cell r">8</div>
-                <div id="9" onclick="clicked(9)" class="cell l">9</div>
+                <div id="0_0" onclick="clicked(0,0)" class="cell rb"></div>
+                <div id="0_1" onclick="clicked(0,1)" class="cell rb"></div>
+                <div id="0_2" onclick="clicked(0,2)" class="cell b"></div>
+                <div id="1_0" onclick="clicked(1,0)" class="cell rb"></div>
+                <div id="1_1" onclick="clicked(1,1)" class="cell rb"></div>
+                <div id="1_2" onclick="clicked(1,2)" class="cell b"></div>
+                <div id="2_0" onclick="clicked(2,0)" class="cell r"></div>
+                <div id="2_1" onclick="clicked(2,1)" class="cell r"></div>
+                <div id="2_2" onclick="clicked(2,2)" class="cell l"></div>
             </div>
         </div>
-        <button id="reset">Reset</button>
+        <button id="reset" onclick="reset()">New game</button>
     </div>
+    <script src="https://kit.fontawesome.com/3659200997.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
 </html>
