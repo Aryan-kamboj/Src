@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Detective</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper_dark">
+        <div id="headder">
+            <span><b>DevDetective</b></span>
+            <span id="light_dark" onclick="mode_switch()">LIGHT <i class="fa-solid fa-sun"></i></span>
+        </div>
+        <div id="search_bar">
+            <span id="search"><i class="fa-solid fa-magnifying-glass"></i><input id="search_field" type="search" placeholder="Enter a GitHub username..." required></span>
+            <button id="search_btn" onclick = "search()">Search</button>
+        </div>
+        <div id="main">
+            <div id="picture">
+                <div id="picture_name">
+                    <img id="profile_picture" src="test_img.jpeg" alt="profile picture">
+                </div>
+            </div>
+            <div id="content">
+                <div id="profile_info">
+                    <div>
+                        <p id="name">Aryan-kamboj</p>
+                        <a id="profile_link" style="color:rgb(20, 148, 233)" href="">@Aryan-kamboj</a> 
+                    </div>
+                    <p style="padding-top: 0.5rem;" id="date_joined">Joined 14 Sep 2021</p>
+                </div>
+                <div id="bio">
+                    This profile has no bio.
+                </div>
+                <div id="profile_stats">
+                    <div ><span>Repos</span><p id="repos" class="pro_st_data">13</p></div>
+                    <div ><span>Followers</span><p id="followers" class="pro_st_data">13</p></div>
+                    <div ><span>Following</span><p id="following" class="pro_st_data">13</p></div>
+                </div>
+                <div id="contacts">
+                    <div class="contacts_class" ><img src="assets/images/location-icon.svg"><span id="location">Not Available</span></div>
+                    <div class="contacts_class" ><img src="assets/images/website-icon.svg"><a id="personal_site" href="">Not Available</a></div>
+                    <div class="contacts_class" ><img src="assets/images/twitter-icon.svg"><a id="twitter" href="">Not Available</a></div>
+                    <div class="contacts_class" ><img src="assets/images/company-icon.svg"><span id="company">Not Available</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/3659200997.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
